@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\DB;
 
 class SeriesController extends Controller
 {
+    public function __construct(private SeriesRepository $repository)
+    {
+
+    }
+
     public function index(Request $request)
     {
         $series = Series::query()->orderBy('nome')->get();
@@ -25,9 +30,9 @@ class SeriesController extends Controller
         return view('series.create');
     }
 
-    public function store(SeriesFormRequest $request, SeriesRepository $repository)
+    public function store(SeriesFormRequest $request)
     {
-        $serie = $repository->add($request);
+        $serie = $this->repository->add($request);
        
         return to_route('series.index')->with('mensagem.sucesso', "A Série '{$serie->nome}' adicionada com sucesso");
     }

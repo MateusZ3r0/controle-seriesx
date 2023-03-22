@@ -10,7 +10,7 @@ use App\Repositories\EloquentSeriesRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class SeriesRepository{
+class EloquentSeriesRepository implements SeriesRepository{
 
     public function add(SeriesFormRequest $request): Series
     {
