@@ -9,6 +9,9 @@ use App\Repositories\SeriesRepository;
 use App\Http\Requests\SeriesFormRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Auth\AuthenticationException;
+
 
 class SeriesController extends Controller
 {
