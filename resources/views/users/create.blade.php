@@ -1,4 +1,4 @@
-<x-layout title="Novo usário">
+<x-layout title="Novo usuário">
     <form method="post">
         @csrf
         <div class="form-group">
@@ -13,10 +13,11 @@
 
         <div class="form-group">
             <label for="password" class="form-label">Senha</label>
-            <input type="password" name="password" id="empasswordail" class="form-control">
+            <input type="password" name="password" id="password" class="form-control">
         </div>
 
-        <button class="btn btn-primary mt-3"> Registrar</button>
+        <button class="btn btn-primary mt-3">
+            Registrar
+        </button>
     </form>
-
 </x-layout>
