@@ -26,5 +26,10 @@ require __DIR__ . '/auth.php';
 
 
 Route::get('/email', function(){
-    return new SeriesCreated();
+    return new SeriesCreated(
+        $nomeSerie='Serie de teste',
+        $idSerie=1,
+        $qtdTemporadas=5,
+        $episodiosPorTemporada=10,
+    );
 });
