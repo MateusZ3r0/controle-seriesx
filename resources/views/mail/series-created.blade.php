@@ -9,4 +9,5 @@
 @component('mail::button', ['url' => route('seasons.index', $idSerie)])
     Ver Série
 @endcomponent
+
 @endcomponent
