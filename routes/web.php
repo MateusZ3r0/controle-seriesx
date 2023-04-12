@@ -27,11 +27,13 @@ Route::get('/dashboard', function () {
 require __DIR__ . '/auth.php';
 
 
-Route::get('/email', function(){
-    return new SeriesCreated(
-        $nomeSerie='Serie de teste',
-        $idSerie=1,
-        $qtdTemporadas=5,
-        $episodiosPorTemporada=10,
+Route::get('/email', function () {
+    return new \App\Mail\SeriesCreated(
+        'Série de teste',
+        19,
+        5,
+        10,
     );
 });
+
+require __DIR__ . '/auth.php';
