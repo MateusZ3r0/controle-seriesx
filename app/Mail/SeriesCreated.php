@@ -23,7 +23,7 @@ class SeriesCreated extends Mailable
         public int $episodiosPorTemporada,
     )
     {
-        $this->subject = "Série $nomeSerie Criada";
+        $this->subject = "Série $nomeSerie criada";
     }
 
     /**
