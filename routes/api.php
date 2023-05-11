@@ -32,5 +32,11 @@ Route::get('/series/{series}/episodes', function(Series $series){
 Route::patch('episodes/{episode}', function(Episode $episode, Request $request){
     $episode->watched = $request->watched;
     $episode->save();
+    
     return $episode;
+});
+
+Route::post('/login', function (Request $request){
+    $credentials = $request->only(['email','password']);
+    dd($credentials);
 });
